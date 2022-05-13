@@ -60,7 +60,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#intro">Home</a></li>
+            <li class="active"><a href="#intro">Dashboard</a></li>
             <li><a href="#service">Service</a></li>
             <li><a href="#doctor">Doctors</a></li>
             <li><a href="#facilities">Facilities</a></li>
@@ -68,9 +68,9 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="index-2.html">Home CTA</a></li>
-                <li><a href="index-form.html">Home Form</a></li>
-                <li><a href="index-video.html">Home video</a></li>
+                <li><a href="index-2.html">Dashboard CTA</a></li>
+                <li><a href="index-form.html">Dashboard Form</a></li>
+                <li><a href="index-video.html">Dashboard video</a></li>
               </ul>
             </li>
           </ul>
@@ -713,7 +713,7 @@
               <div class="widget">
                 <h5>Information</h5>
                 <ul>
-                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Dashboard</a></li>
                   <li><a href="#">Laboratory</a></li>
                   <li><a href="#">Medical treatment</a></li>
                   <li><a href="#">Terms & conditions</a></li>
