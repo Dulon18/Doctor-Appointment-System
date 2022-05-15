@@ -14,12 +14,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/home',[HomeController::class,'home']);
 
+Route::get('/',[AdminController::class,'user']);
 Route::get('/admin/dashboard',[AdminController::class,'admin']);
 
 Route::middleware([
