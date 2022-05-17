@@ -1,827 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <title>Medicio Health Care</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- css -->
-  <link href="{{url('frontend/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-  <link href="{{url('frontend/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" type="text/css" href="{{url('frontend/plugins/cubeportfolio/css/cubeportfolio.min.css')}}">
-  <link href="{{url('frontend/css/nivo-lightbox.css')}}" rel="stylesheet" />
-  <link href="{{url('frontend/css/nivo-lightbox-theme/default/default.css')}}" rel="stylesheet" type="text/css" />
-  <link href="{{url('frontend/css/owl.carousel.css')}}" rel="stylesheet" media="screen" />
-  <link href="{{url('frontend/css/owl.theme.css')}}" rel="stylesheet" media="screen" />
-  <link href="{{url('frontend/css/animate.css')}}" rel="stylesheet" />
-  <link href="{{url('frontend/css/style.css')}}" rel="stylesheet">
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-  <!-- boxed bg -->
-  <link id="bodybg" href="{{url('frontend/bodybg/bg1.css')}}" rel="stylesheet" type="text/css" />
-  <!-- template skin -->
-  <link id="t-colors" href="{{url('frontend/color/default.css')}}" rel="stylesheet">
+  <title>HMS</title>
 
+<link rel="stylesheet" href="{{url('frontend/assets/css/maicons.css')}}">
+
+  <link rel="stylesheet" href="{{url('frontend/assets/css/bootstrap.css')}}">
+
+  <link rel="stylesheet" href="{{url('frontend/assets/vendor/owl-carousel/css/owl.carousel.css')}}">
+
+  <link rel="stylesheet" href="{{url('frontend/assets/vendor/animate/animate.css')}}">
+
+  <link rel="stylesheet" href="{{url('frontend/assets/css/theme.css')}}">
 </head>
+<body>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
 
-
-  <div id="wrapper">
-
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-      <div class="top-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 text-sm">
+            <div class="site-info">
+              <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
+              <span class="divider">|</span>
+              <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <p class="bold text-right">Call us now +62 008 65 001</p>
+          </div>
+          <div class="col-sm-4 text-right text-sm">
+            <div class="social-mini-button">
+              <a href="#"><span class="mai-logo-facebook-f"></span></a>
+              <a href="#"><span class="mai-logo-twitter"></span></a>
+              <a href="#"><span class="mai-logo-dribbble"></span></a>
+              <a href="#"><span class="mai-logo-instagram"></span></a>
+            </div>
+          </div>
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- .topbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
+
+        <form action="#">
+          <div class="input-group input-navbar">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
+          </div>
+        </form>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupport">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary ml-lg-3" href="{{route('register')}}">Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary ml-lg-3" href="{{route('login')}}">Login</a>
+            </li>
+          </ul>
+        </div> <!-- .navbar-collapse -->
+      </div> <!-- .container -->
+    </nav>
+  </header>
+
+  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
+    <div class="hero-section">
+      <div class="container text-center wow zoomIn">
+        <span class="subhead">Let's make your life happier</span>
+        <h1 class="display-4">Healthy Living</h1>
+        <a href="#" class="btn btn-primary">Let's Consult</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-light">
+    <div class="page-section py-3 mt-md-n5 custom-index">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-secondary text-white">
+                <span class="mai-chatbubbles-outline"></span>
+              </div>
+              <p><span>Chat</span> with a doctors</p>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-primary text-white">
+                <span class="mai-shield-checkmark"></span>
+              </div>
+              <p><span>One</span>-Health Protection</p>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-accent text-white">
+                <span class="mai-basket"></span>
+              </div>
+              <p><span>One</span>-Health Pharmacy</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="container navigation">
+    </div> <!-- .page-section -->
 
-        <div class="navbar-header page-scroll">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-          <a class="navbar-brand" href="index-2.html">
-                    <img src="{{url('frontend/img/logo.png')}}" alt="" width="150" height="40" />
-                </a>
+    <div class="page-section pb-0">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-3 wow fadeInUp">
+            <h1>Welcome to Your Health <br> Center</h1>
+            <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
+            <a href="about.html" class="btn btn-primary">Learn More</a>
+          </div>
+          <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
+            <div class="img-place custom-img-1">
+              <img src="../assets/img/bg-doctor.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .bg-light -->
+  </div> <!-- .bg-light -->
+
+  <div class="page-section">
+    <div class="container">
+      <h1 class="text-center mb-5 wow fadeInUp">Our Doctors</h1>
+
+      <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../assets/img/doctors/doctor_1.jpg" alt="">
+              <div class="meta">
+                <a href="#"><span class="mai-call"></span></a>
+                <a href="#"><span class="mai-logo-whatsapp"></span></a>
+              </div>
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Dr. Stein Albert</p>
+              <span class="text-sm text-grey">Cardiology</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../assets/img/doctors/doctor_2.jpg" alt="">
+              <div class="meta">
+                <a href="#"><span class="mai-call"></span></a>
+                <a href="#"><span class="mai-logo-whatsapp"></span></a>
+              </div>
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Dr. Alexa Melvin</p>
+              <span class="text-sm text-grey">Dental</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../assets/img/doctors/doctor_3.jpg" alt="">
+              <div class="meta">
+                <a href="#"><span class="mai-call"></span></a>
+                <a href="#"><span class="mai-logo-whatsapp"></span></a>
+              </div>
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Dr. Rebecca Steffany</p>
+              <span class="text-sm text-grey">General Health</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../assets/img/doctors/doctor_3.jpg" alt="">
+              <div class="meta">
+                <a href="#"><span class="mai-call"></span></a>
+                <a href="#"><span class="mai-logo-whatsapp"></span></a>
+              </div>
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Dr. Rebecca Steffany</p>
+              <span class="text-sm text-grey">General Health</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../assets/img/doctors/doctor_3.jpg" alt="">
+              <div class="meta">
+                <a href="#"><span class="mai-call"></span></a>
+                <a href="#"><span class="mai-logo-whatsapp"></span></a>
+              </div>
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Dr. Rebecca Steffany</p>
+              <span class="text-sm text-grey">General Health</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-section bg-light">
+    <div class="container">
+      <h1 class="text-center wow fadeInUp">Latest News</h1>
+      <div class="row mt-5">
+        <div class="col-lg-4 py-2 wow zoomIn">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-category">
+                <a href="#">Covid19</a>
+              </div>
+              <a href="blog-details.html" class="post-thumb">
+                <img src="../assets/img/blog/blog_1.jpg" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="blog-details.html">List of Countries without Coronavirus case</a></h5>
+              <div class="site-info">
+                <div class="avatar mr-2">
+                  <div class="avatar-img">
+                    <img src="../assets/img/person/person_1.jpg" alt="">
+                  </div>
+                  <span>Roger Adams</span>
+                </div>
+                <span class="mai-time"></span> 1 week ago
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 py-2 wow zoomIn">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-category">
+                <a href="#">Covid19</a>
+              </div>
+              <a href="blog-details.html" class="post-thumb">
+                <img src="../assets/img/blog/blog_2.jpg" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="blog-details.html">Recovery Room: News beyond the pandemic</a></h5>
+              <div class="site-info">
+                <div class="avatar mr-2">
+                  <div class="avatar-img">
+                    <img src="../assets/img/person/person_1.jpg" alt="">
+                  </div>
+                  <span>Roger Adams</span>
+                </div>
+                <span class="mai-time"></span> 4 weeks ago
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 py-2 wow zoomIn">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-category">
+                <a href="#">Covid19</a>
+              </div>
+              <a href="blog-details.html" class="post-thumb">
+                <img src="../assets/img/blog/blog_3.jpg" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="blog-details.html">What is the impact of eating too much sugar?</a></h5>
+              <div class="site-info">
+                <div class="avatar mr-2">
+                  <div class="avatar-img">
+                    <img src="../assets/img/person/person_2.jpg" alt="">
+                  </div>
+                  <span>Diego Simmons</span>
+                </div>
+                <span class="mai-time"></span> 2 months ago
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#intro">Dashboard</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#doctor">Doctors</a></li>
-            <li><a href="#facilities">Facilities</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+        <div class="col-12 text-center mt-4 wow zoomIn">
+          <a href="blog.html" class="btn btn-primary">Read More</a>
+        </div>
 
-            @if(Route::has('login'))
-            @auth
-            <x-app-layout>
-    
-            </x-app-layout>
-            @else
+      </div>
+    </div>
+  </div> <!-- .page-section -->
 
-            <li><a href="{{route('login')}}">Login</a></li>
-            <li><a href="{{route('register')}}">Registration</a></li>
-            @endauth
-            @endif
-          
+  <div class="page-section">
+    <div class="container">
+      <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
+
+      <form class="main-form">
+        <div class="row mt-5 ">
+          <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
+            <input type="text" class="form-control" placeholder="Full name">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+            <input type="text" class="form-control" placeholder="Email address..">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
+            <input type="date" class="form-control">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+            <select name="departement" id="departement" class="custom-select">
+              <option value="general">General Health</option>
+              <option value="cardiology">Cardiology</option>
+              <option value="dental">Dental</option>
+              <option value="neurology">Neurology</option>
+              <option value="orthopaedics">Orthopaedics</option>
+            </select>
+          </div>
+          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+            <input type="text" class="form-control" placeholder="Number..">
+          </div>
+          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Enter message.."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Submit Request</button>
+      </form>
+    </div>
+  </div> <!-- .page-section -->
+
+  <div class="page-section banner-home bg-image" style="background-image: url(../assets/img/banner-pattern.svg);">
+    <div class="container py-5 py-lg-0">
+      <div class="row align-items-center">
+        <div class="col-lg-4 wow zoomIn">
+          <div class="img-banner d-none d-lg-block">
+            <img src="../assets/img/mobile_app.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-8 wow fadeInRight">
+          <h1 class="font-weight-normal mb-3">Get easy access of all features using One Health Application</h1>
+          <a href="#"><img src="../assets/img/google_play.svg" alt=""></a>
+          <a href="#" class="ml-2"><img src="../assets/img/app_store.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div> <!-- .banner-home -->
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row px-md-3">
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Company</h5>
+          <ul class="footer-menu">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Editorial Team</a></li>
+            <li><a href="#">Protection</a></li>
           </ul>
         </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
-    </nav>
-
-    <!-- Section: intro -->
-    <section id="intro" class="intro">
-      <div class="intro-content">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                <h2 class="h-ultra">Medicio medical group</h2>
-              </div>
-              <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-                <h4 class="h-light">Provide best quality healthcare for you</h4>
-              </div>
-              <div class="well well-trans">
-                <div class="wow fadeInRight" data-wow-delay="0.1s">
-
-                  <ul class="lead-list">
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Affordable monthly premium packages</strong><br />Lorem ipsum dolor sit amet, in verterem persecuti vix, sit te meis</span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br />Lorem ipsum dolor sit amet, in verterem persecuti vix, sit te meis</span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Only use friendly environment</strong><br />Lorem ipsum dolor sit amet, in verterem persecuti vix, sit te meis</span></li>
-                  </ul>
-                  <p class="text-right wow bounceIn" data-wow-delay="0.4s">
-                    <a href="#" class="btn btn-skin btn-lg">Learn more <i class="fa fa-angle-right"></i></a>
-                  </p>
-                </div>
-              </div>
-
-
-            </div>
-            <div class="col-lg-6">
-              <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-                <img src="{{url('frontend/img/dummy/img-1.png')}}" class="img-responsive" alt="" />
-              </div>
-            </div>
-          </div>
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>More</h5>
+          <ul class="footer-menu">
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Join as Doctors</a></li>
+          </ul>
         </div>
-      </div>
-    </section>
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Our partner</h5>
+          <ul class="footer-menu">
+            <li><a href="#">One-Fitness</a></li>
+            <li><a href="#">One-Drugs</a></li>
+            <li><a href="#">One-Live</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Contact</h5>
+          <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
+          <a href="#" class="footer-link">701-573-7582</a>
+          <a href="#" class="footer-link">healthcare@temporary.net</a>
 
-    <!-- /Section: intro -->
-
-    <!-- Section: boxes -->
-    <section id="boxes" class="home-section paddingtop-80">
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
-
-                <i class="fa fa-check fa-3x circled bg-skin"></i>
-                <h4 class="h-bold">Make an appoinment</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
-
-                <i class="fa fa-list-alt fa-3x circled bg-skin"></i>
-                <h4 class="h-bold">Choose your package</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
-                <i class="fa fa-user-md fa-3x circled bg-skin"></i>
-                <h4 class="h-bold">Help by specialist</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
-
-                <i class="fa fa-hospital-o fa-3x circled bg-skin"></i>
-                <h4 class="h-bold">Get diagnostic report</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
-                </p>
-              </div>
-            </div>
+          <h5 class="mt-3">Social Media</h5>
+          <div class="footer-sosmed mt-3">
+            <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-twitter"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-google-plus-g"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-instagram"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-linkedin"></span></a>
           </div>
         </div>
       </div>
 
-    </section>
-    <!-- /Section: boxes -->
+      <hr>
 
+      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
+    </div>
+  </footer>
 
-    <section id="callaction" class="home-section paddingtop-40">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="callaction bg-gray">
-              <div class="row">
-                <div class="col-md-8">
-                  <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="cta-text">
-                      <h3>In an emergency? Need help now?</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit uisque interdum ante eget faucibus. </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="wow lightSpeedIn" data-wow-delay="0.1s">
-                    <div class="cta-btn">
-                      <a href="#" class="btn btn-skin btn-lg">Book an appoinment</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<script src="../assets/js/jquery-3.5.1.min.js"></script>
 
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Section: services -->
-    <section id="service" class="home-section nopadding paddingtop-60">
+<script src="../assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
 
-      <div class="container">
+<script src="../assets/vendor/wow/wow.min.js"></script>
 
-        <div class="row">
-          <div class="col-sm-6 col-md-6">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <img src="{{url('frontend/img/dummy/img-1.jpg')}}" class="img-responsive" alt="" />
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-
-            <div class="wow fadeInRight" data-wow-delay="0.1s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <span class="fa fa-stethoscope fa-3x"></span>
-                </div>
-                <div class="service-desc">
-                  <h5 class="h-light">Medical checkup</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="wow fadeInRight" data-wow-delay="0.2s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <span class="fa fa-wheelchair fa-3x"></span>
-                </div>
-                <div class="service-desc">
-                  <h5 class="h-light">Nursing Services</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-                </div>
-              </div>
-            </div>
-            <div class="wow fadeInRight" data-wow-delay="0.3s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <span class="fa fa-plus-square fa-3x"></span>
-                </div>
-                <div class="service-desc">
-                  <h5 class="h-light">Pharmacy</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-          <div class="col-sm-3 col-md-3">
-
-            <div class="wow fadeInRight" data-wow-delay="0.1s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <span class="fa fa-h-square fa-3x"></span>
-                </div>
-                <div class="service-desc">
-                  <h5 class="h-light">Gyn Care</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="wow fadeInRight" data-wow-delay="0.2s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <span class="fa fa-filter fa-3x"></span>
-                </div>
-                <div class="service-desc">
-                  <h5 class="h-light">Neurology</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-                </div>
-              </div>
-            </div>
-            <div class="wow fadeInRight" data-wow-delay="0.3s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <span class="fa fa-user-md fa-3x"></span>
-                </div>
-                <div class="service-desc">
-                  <h5 class="h-light">Sleep Center</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- /Section: services -->
-
-
-    <!-- Section: team -->
-    <section id="doctor" class="home-section bg-gray paddingbot-60">
-      <div class="container marginbot-50">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="section-heading text-center">
-                <h2 class="h-bold">Doctors</h2>
-                <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p>
-              </div>
-            </div>
-            <div class="divider-short"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-
-            <div id="filters-container" class="cbp-l-filters-alignLeft">
-              <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (
-                <div class="cbp-filter-counter"></div>)</div>
-              <div data-filter=".cardiologist" class="cbp-filter-item">Cardiologist (
-                <div class="cbp-filter-counter"></div>)</div>
-              <div data-filter=".psychiatrist" class="cbp-filter-item">Psychiatrist (
-                <div class="cbp-filter-counter"></div>)</div>
-              <div data-filter=".neurologist" class="cbp-filter-item">Neurologist (
-                <div class="cbp-filter-counter"></div>)</div>
-            </div>
-
-            <div id="grid-container" class="cbp-l-grid-team">
-              <ul>
-                <li class="cbp-item psychiatrist">
-                  <a href="doctors/member1.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="{{url('frontend/img/team/1.jpg')}}" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice Grue</a>
-                  <div class="cbp-l-grid-team-position">Psychiatrist</div>
-                </li>
-                <li class="cbp-item cardiologist">
-                  <a href="doctors/member2.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="{{url('frontend/img/team/2.jpg')}}" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph Murphy</a>
-                  <div class="cbp-l-grid-team-position">Cardiologist</div>
-                </li>
-                <li class="cbp-item cardiologist">
-                  <a href="doctors/member3.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="{{url('frontend/img/team/3.jpg')}}" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison Davis</a>
-                  <div class="cbp-l-grid-team-position">Cardiologist</div>
-                </li>
-                <li class="cbp-item neurologist">
-                  <a href="doctors/member4.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="{{url('frontend/img/team/4.jpg')}}" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam Taylor</a>
-                  <div class="cbp-l-grid-team-position">Neurologist</div>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <!-- /Section: team -->
-
-
-
-    <!-- Section: works -->
-    <section id="facilities" class="home-section paddingbot-60">
-      <div class="container marginbot-50">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="section-heading text-center">
-                <h2 class="h-bold">Our facilities</h2>
-                <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p>
-              </div>
-            </div>
-            <div class="divider-short"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="wow bounceInUp" data-wow-delay="0.2s">
-              <div id="owl-works" class="owl-carousel">
-                <div class="item"><a href="{{url('frontend/img/photo/1.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="{{url('frontend/img/photo/1.jpg')}}" class="img-responsive" alt="img"></a></div>
-                <div class="item"><a href="{{url('frontend/img/photo/2.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/2@2x.jpg"><img src="{{url('frontend/img/photo/2.jpg')}}" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="{{url('frontend/img/photo/3.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/3@2x.jpg"><img src="{{url('frontend/img/photo/3.jpg')}}" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="{{url('frontend/img/photo/4.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/4@2x.jpg"><img src="{{url('frontend/img/photo/4.jpg')}}" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="{{url('frontend/img/photo/5.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/5@2x.jpg"><img src="{{url('frontend/img/photo/5.jpg')}}" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="{{url('frontend/img/photo/6.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/6@2x.jpg"><img src="{{url('frontend/img/photo/6.jpg')}}" class="img-responsive " alt="img"></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Section: works -->
-
-
-    <!-- Section: testimonial -->
-    <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
-
-      <div class="carousel-reviews broun-block">
-        <div class="container">
-          <div class="row">
-            <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-
-              <div class="carousel-inner">
-                <div class="item active">
-                  <div class="col-md-4 col-sm-6">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Emergency Contraception</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
-                          class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                    <div class="person-text rel text-light">
-                      <img src="{{url('frontend/img/testimonials/1.jpg')}}" alt="" class="person img-circle" />
-                      <a title="" href="#">Anna</a>
-                      <span>Chicago, Illinois</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 hidden-xs">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Orthopedic Surgery</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span>
-                        <span
-                          data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                    <div class="person-text rel text-light">
-                      <img src="{{url('frontend/img/testimonials/2.jpg')}}" alt="" class="person img-circle" />
-                      <a title="" href="#">Matthew G</a>
-                      <span>San Antonio, Texas</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Medical consultation</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
-                          class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                    <div class="person-text rel text-light">
-                      <img src="{{url('frontend/img/testimonials/3.jpg')}}" alt="" class="person img-circle" />
-                      <a title="" href="#">Scarlet Smith</a>
-                      <span>Dallas, Texas</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="col-md-4 col-sm-6">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Birth control pills</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
-                          class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                    <div class="person-text rel text-light">
-                      <img src="{{url('frontend/img/testimonials/4.jpg')}}" alt="" class="person img-circle" />
-                      <a title="" href="#">Lucas Thompson</a>
-                      <span>Austin, Texas</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 hidden-xs">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Radiology</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span>
-                        <span
-                          data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                    <div class="person-text rel text-light">
-                      <img src="{{url('frontend/img/testimonials/5.jpg')}}" alt="" class="person img-circle" />
-                      <a title="" href="#">Ella Mentree</a>
-                      <span>Fort Worth, Texas</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Cervical Lesions</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
-                          class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                    <div class="person-text rel text-light">
-                      <img src="{{url('frontend/img/testimonials/6.jpg')}}" alt="" class="person img-circle" />
-                      <a title="" href="#">Suzanne Adam</a>
-                      <span>Detroit, Michigan</span>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-
-              <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-              <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Section: testimonial -->
-
-
-    <!-- Section: pricing -->
-    <section id="pricing" class="home-section bg-gray paddingbot-60">
-      <div class="container marginbot-50">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow lightSpeedIn" data-wow-delay="0.1s">
-              <div class="section-heading text-center">
-                <h2 class="h-bold">Health packages</h2>
-                <p>Take charge of your health today with our specially designed health packages</p>
-              </div>
-            </div>
-            <div class="divider-short"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-sm-4 pricing-box">
-            <div class="wow bounceInUp" data-wow-delay="0.1s">
-              <div class="pricing-content general">
-                <h2>Basic Fit 1 Package</h2>
-                <h3>$33<sup>.99</sup> <span>/ one time</span></h3>
-                <ul>
-                  <li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
-                  <li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
-                  <li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
-                  <li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
-                </ul>
-
-                <div class="price-bottom">
-                  <a href="#" class="btn btn-skin btn-lg">Purchase</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4 pricing-box featured-price">
-            <div class="wow bounceInUp" data-wow-delay="0.3s">
-              <div class="pricing-content featured">
-                <h2>Golden Glow Package</h2>
-                <h3>$65<sup>.99</sup> <span>/ one time</span></h3>
-                <ul>
-                  <li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
-                  <li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
-                  <li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
-                  <li>Body Composition Analysis <i class="fa fa-check icon-success"></i></li>
-                  <li>GR Assessment & Scoring <i class="fa fa-check icon-success"></i></li>
-                </ul>
-
-                <div class="price-bottom">
-                  <a href="#" class="btn btn-skin btn-lg">Purchase</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4 pricing-box">
-            <div class="wow bounceInUp" data-wow-delay="0.2s">
-              <div class="pricing-content general last">
-                <h2>Basic Fit 2 Package</h2>
-                <h3>$47<sup>.99</sup> <span>/ one time</span></h3>
-                <ul>
-                  <li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
-                  <li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
-                  <li>General Screening – Regular <i class="fa fa-check icon-success"></i></li>
-                  <li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
-                </ul>
-
-                <div class="price-bottom">
-                  <a href="#" class="btn btn-skin btn-lg">Purchase</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <!-- /Section: pricing -->
-
-    <section id="partner" class="home-section paddingbot-60">
-      <div class="container marginbot-50">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow lightSpeedIn" data-wow-delay="0.1s">
-              <div class="section-heading text-center">
-                <h2 class="h-bold">Our partner</h2>
-                <p>Take charge of your health today with our specially designed health packages</p>
-              </div>
-            </div>
-            <div class="divider-short"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-3">
-            <div class="partner">
-              <a href="#"><img src="{{url('frontend/img/dummy/partner-1.jpg')}}" alt="" /></a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="partner">
-              <a href="#"><img src="{{url('frontend/img/dummy/partner-2.jpg')}}" alt="" /></a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="partner">
-              <a href="#"><img src="{{url('frontend/img/dummy/partner-3.jpg')}}" alt="" /></a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="partner">
-              <a href="#"><img src="{{url('frontend/img/dummy/partner-4.jpg')}}" alt="" /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-4">
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="widget">
-                <h5>About Medicio</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, ne nam purto nihil impetus, an facilisi accommodare sea
-                </p>
-              </div>
-            </div>
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="widget">
-                <h5>Information</h5>
-                <ul>
-                  <li><a href="#">Dashboard</a></li>
-                  <li><a href="#">Laboratory</a></li>
-                  <li><a href="#">Medical treatment</a></li>
-                  <li><a href="#">Terms & conditions</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="widget">
-                <h5>Medicio center</h5>
-                <p>
-                  Nam leo lorem, tincidunt id risus ut, ornare tincidunt naqunc sit amet.
-                </p>
-                <ul>
-                  <li>
-                    <span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
-								</span> Monday - Saturday, 8am to 10pm
-                  </li>
-                  <li>
-                    <span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-								</span> +62 0888 904 711
-                  </li>
-                  <li>
-                    <span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-								</span> hello@medicio.com
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="widget">
-                <h5>Our location</h5>
-                <p>The Suithouse V303, Kuningan City, Jakarta Indonesia 12940</p>
-
-              </div>
-            </div>
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="widget">
-                <h5>Follow us</h5>
-                <ul class="company-social">
-                  <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
-                  <li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sub-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-6">
-              <div class="wow fadeInLeft" data-wow-delay="0.1s">
-                <div class="text-left">
-                  <p></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-6">
-              <div class="wow fadeInRight" data-wow-delay="0.1s">
-                <div class="text-right">
-                  <div class="credits">
-                    <a target="_blank" href="https://www.templateshub.net">Templates Hub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-  </div>
-  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-
-  <!-- Core JavaScript Files -->
-  <script src="{{url('frontend/js/jquery.min.js')}}"></script>
-  <script src="{{url('frontend/js/bootstrap.min.js')}}"></script>
-  <script src="{{url('frontend/js/jquery.easing.min.js')}}"></script>
-  <script src="{{url('frontend/js/wow.min.js')}}"></script>
-  <script src="{{url('frontend/js/jquery.scrollTo.js')}}"></script>
-  <script src="{{url('frontend/js/jquery.appear.js')}}"></script>
-  <script src="{{url('frontend/js/stellar.js')}}"></script>
-  <script src="{{url('frontend/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js')}}"></script>
-  <script src="{{url('frontend/js/owl.carousel.min.js')}}"></script>
-  <script src="{{url('frontend/js/nivo-lightbox.min.js')}}"></script>
-  <script src="{{url('frontend/js/custom.js')}}"></script>
-
-  <script>if( window.self == window.top ) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); } </script>
+<script src="../assets/js/theme.js"></script>
+  
 </body>
-
-
 </html>
