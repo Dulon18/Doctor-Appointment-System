@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DoctorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/home',[HomeController::class,'home']);
 
 Route::get('/',[AdminController::class,'user']);
-Route::get('/admin/dashboard',[AdminController::class,'admin']);
+Route::get('/admin',[AdminController::class,'admin']);
+Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
 
 Route::middleware([
     'auth:sanctum',
@@ -28,3 +30,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+//Doctor
+Route::get('/doctor/list',[DoctorController::class,'doctorList'])->name('doctor.list');
