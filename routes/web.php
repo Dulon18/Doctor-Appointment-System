@@ -14,8 +14,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-
-
 Route::get('/home',[HomeController::class,'home']);
 
 Route::get('/',[AdminController::class,'user']);
