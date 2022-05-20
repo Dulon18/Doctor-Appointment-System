@@ -5,7 +5,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Doctor List </h4>
-                    <a href="#" class="btn btn-outline-primary m-2 fs-5"> +  Add
+                    <a href="{{route('doctor.add')}}" class="btn btn-outline-primary m-2 fs-5"> +  Add
                     </a>
                     <hr>
                     

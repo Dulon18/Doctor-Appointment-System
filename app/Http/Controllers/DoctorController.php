@@ -10,4 +10,8 @@ class DoctorController extends Controller
     {
         return view('admin.pages.doctor.doctor_list');
     }
+    public function doctorAdd()
+    {
+        return view('admin.pages.doctor.doctor_add_form');
+    }
 }

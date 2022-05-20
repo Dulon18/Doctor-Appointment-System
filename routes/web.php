@@ -32,3 +32,4 @@ Route::middleware([
 });
 //Doctor
 Route::get('/doctor/list',[DoctorController::class,'doctorList'])->name('doctor.list');
+Route::get('/add',[DoctorController::class,'doctorAdd'])->name('doctor.add');
