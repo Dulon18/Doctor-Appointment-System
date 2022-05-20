@@ -15,11 +15,11 @@ use App\Http\Controllers\DoctorController;
 |
 */
 
-Route::get('/home',[HomeController::class,'home']);
+Route::get('/home',[HomeController::class,'home'])->name('admin.home');
 
 Route::get('/',[AdminController::class,'user']);
 Route::get('/admin',[AdminController::class,'admin']);
-Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
+
 
 Route::middleware([
     'auth:sanctum',

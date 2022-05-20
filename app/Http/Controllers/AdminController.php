@@ -8,15 +8,12 @@ class AdminController extends Controller
 {
     public function user()
     {
-        return view('user/home');
+        return view('user.home');
     }
 
     public function admin()
     {
-        return view('admin/home');
+        return view('admin.home');
     }
-    public function dashboard()
-    {
-        return view('admin.dashboard');
-    }
+
 }

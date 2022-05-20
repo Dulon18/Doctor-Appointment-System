@@ -41,9 +41,23 @@
         <!-- partial:partials/_sidebar.html -->
 @include('admin.partial.sidebar')
         <!-- partial -->
-       @include('admin.dashboard')
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white me-2">
+                  <i class="mdi mdi-home"></i>
+                </span> 
+              </h3>
+            
+            </div>
+            @yield('content');
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
