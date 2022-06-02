@@ -12,59 +12,41 @@
                     <div class="table-responsive">
                       <table class="table">
                         <thead>
+
                           <tr>
+                            <th>No.</th>
                             <th> Doctor Name </th>
                             <th> Specility </th>
                             <th> Room </th>
                             <th> Image </th>
                             <th> Status</th>
+                            <th> Action</th>
                           </tr>
                         </thead>
                         <tbody>
+                          @foreach($doctors as $key=>$doctor)
                           <tr>
+                            <td>{{$key+1}}</td>
                             <td>
-                              <img src="assets/images/faces/face1.jpg" class="me-2" alt="image"> David Grey
+                            {{$doctor->name}}
                             </td>
-                            <td> Fund is not recieved </td>
+                            <td> {{$doctor->specility}} </td>
                             <td>
-                              <label class="badge badge-gradient-success">DONE</label>
+                            {{$doctor->room_number}}   
                             </td>
-                            <td> Dec 5, 2017 </td>
-                            <td> WD-12345 </td>
-                          </tr>
-                          <tr>
                             <td>
-                              <img src="assets/images/faces/face2.jpg" class="me-2" alt="image"> Stella Johnson
+                              <img src="{{url('/storage/'.$doctor->image)}}" alt="Image not found">
+                  
                             </td>
-                            <td> High loading time </td>
+                            <td></td>
                             <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                              <a type="button" href="" class="btn btn-outline-info">Edit</a>
+                              <a type="button" href="" class="btn btn-outline-danger">Delete</a>
+                              <a type="button" href="" class="btn btn-outline-primary">View</a>
                             </td>
-                            <td> Dec 12, 2017 </td>
-                            <td> WD-12346 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face3.jpg" class="me-2" alt="image"> Marina Michel
-                            </td>
-                            <td> Website down for one week </td>
-                            <td>
-                              <label class="badge badge-gradient-info">ON HOLD</label>
-                            </td>
-                            <td> Dec 16, 2017 </td>
-                            <td> WD-12347 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face4.jpg" class="me-2" alt="image"> John Doe
-                            </td>
-                            <td> Loosing control on server </td>
-                            <td>
-                              <label class="badge badge-gradient-danger">REJECTED</label>
-                            </td>
-                            <td> Dec 3, 2017 </td>
-                            <td> WD-12348 </td>
-                          </tr>
+                            
+                          </tr> 
+                          @endforeach
                         </tbody>
                       </table>
                     </div>

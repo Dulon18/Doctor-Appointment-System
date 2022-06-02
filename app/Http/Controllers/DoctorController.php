@@ -8,7 +8,8 @@ class DoctorController extends Controller
 {
     public function doctorList()
     {
-        return view('admin.pages.doctor.doctor_list');
+        $doctors=Doctor::all();
+        return view('admin.pages.doctor.doctor_list',compact('doctors'));
     }
     public function doctorAdd()
     {
