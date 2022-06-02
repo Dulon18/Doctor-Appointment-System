@@ -13,11 +13,11 @@
                       <table class="table">
                         <thead>
                           <tr>
-                            <th> Assignee </th>
-                            <th> Subject </th>
-                            <th> Status </th>
-                            <th> Last Update </th>
-                            <th> Tracking ID </th>
+                            <th> Doctor Name </th>
+                            <th> Specility </th>
+                            <th> Room </th>
+                            <th> Image </th>
+                            <th> Status</th>
                           </tr>
                         </thead>
                         <tbody>
