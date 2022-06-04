@@ -37,3 +37,4 @@ Route::post('/store',[DoctorController::class,'store'])->name('doctor.store');
 Route::get('/status/{id}',[DoctorController::class,'changeStatus'])->name('doctor.status');
 
 //appointment
+Route::post('/store',[HomeController::class,'appointmentStore'])->name('appointment.store');

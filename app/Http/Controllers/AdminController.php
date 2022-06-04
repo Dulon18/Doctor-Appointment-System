@@ -10,6 +10,7 @@ class AdminController extends Controller
 {
     public function user()
     {
+       
         if(Auth::id())
         {
             return redirect('home');
@@ -28,5 +29,7 @@ class AdminController extends Controller
     {
         return view('admin.home');
     }
+
+ 
 
 }
