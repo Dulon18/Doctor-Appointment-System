@@ -103,6 +103,21 @@
       </div> <!-- .container -->
     </nav>
   </header>
+  @if($errors->any())
+                      <div class="alert alert-danger">
+                          <ul>
+                              @foreach ($errors->all() as $error)
+                                  <li>{{ $error }}</li>
+                              @endforeach
+                          </ul>
+                      </div>
+                  @endif
+          @if(session()->has('error'))
+                <p class="alert alert-danger">
+                  <button type="button" class="close" data-dismiss="alert">x</button>
+                  {{session()->get('error')}}</p>
+           @endif
+
   @if(session()->has('success'))
                 <p class="alert alert-success">
                   <button type="button" class="close" data-dismiss="alert">x</button>
@@ -225,7 +240,7 @@
 
       <hr>
 
-      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
+      <p id="copyright">Copyright &copy; 2020 <a href="#" target="_blank">InCare-Health</a>. All right reserved</p>
     </div>
   </footer>
 

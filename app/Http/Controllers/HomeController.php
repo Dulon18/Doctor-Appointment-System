@@ -38,19 +38,27 @@ class HomeController extends Controller
     function appointmentStore(Request $request)
     {
 
-      Appointment::create([
-
-          'name'=>$request->name,
-          'email'=>$request->email,
-          'date'=>$request->date,
-          'doctor_name'=>$request->doctor_name,
-          'phone'=>$request->phone,
-          'message'=>$request->message,
-          'user_id'=>Auth::user()->id,
-          //dd($request)
-      ]);
-     
-      return redirect()->back()->with('success','Appointment successfully done..We contact with you soon..');
+        if(Auth::id())
+        {
+            Appointment::create([
+                'name'=>$request->name,
+                'email'=>$request->email,
+                'date'=>$request->date,
+                'doctor_name'=>$request->doctor_name,
+                'phone'=>$request->phone,
+                'message'=>$request->message,
+                'user_id'=>Auth::user()->id,
+                //dd($request)
+            ]);
+           
+            return redirect()->back()->with('success','Appointment successfully done..We contact with you soon..');
+        }
+        else
+        {
+            return redirect()->back()->with('error',' Please Login First ..');
+        }
+    
+    
     }
 
     function myAppointment()
