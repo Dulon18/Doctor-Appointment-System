@@ -34,3 +34,4 @@ Route::middleware([
 Route::get('/doctor/list',[DoctorController::class,'doctorList'])->name('doctor.list');
 Route::get('/add',[DoctorController::class,'doctorAdd'])->name('doctor.add');
 Route::post('/store',[DoctorController::class,'store'])->name('doctor.store');
+Route::get('/status/{id}',[DoctorController::class,'changeStatus'])->name('doctor.status');

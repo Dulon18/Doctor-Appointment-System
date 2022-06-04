@@ -38,7 +38,15 @@
                               <img src="{{url('/storage/'.$doctor->image)}}" alt="Image not found">
                   
                             </td>
-                            <td></td>
+                            <td>
+                            @if($doctor->status==1)
+                  
+                                <a href="{{route('doctor.status',$doctor->id)}}" onclick="return confirm('Are you sure???')" class="btn btn-success">Active</a>
+                        
+                            @else
+                              <a href="{{route('doctor.status',$doctor->id)}}" class="btn btn-danger">Inactive</a>
+                            @endif
+                            </td>
                             <td>
                               <a type="button" href="" class="btn btn-outline-info">Edit</a>
                               <a type="button" href="" class="btn btn-outline-danger">Delete</a>

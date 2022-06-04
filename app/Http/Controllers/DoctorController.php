@@ -30,10 +30,27 @@ class DoctorController extends Controller
       Doctor::create([
           'name'=>$request->name,
           'specility'=>$request->specility,
+          'phone'=>$request->phone,
           'room_number'=>$request->room,
           'image'=>$filename,
 
       ]);
-       return redirect()->back();
+       return redirect()->back()->with('success','Doctor Create Successfully..!!');
+    }
+
+    function changeStatus($id)
+    {
+        $status=Doctor::select('status')->where('id',$id)->first();
+        if($status->status == 0)
+        {
+           $status=1;
+        }
+        else
+        {
+            $status=0;
+        }
+        Doctor::Where('id',$id)->update(['status'=>$status]);
+        return redirect()->back()->with('success','Status Update Successfully..!');
+
     }
 }

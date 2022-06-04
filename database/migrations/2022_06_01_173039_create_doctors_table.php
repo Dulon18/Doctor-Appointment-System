@@ -17,8 +17,10 @@ class CreateDoctorsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('specility');
+            $table->integer('phone');
             $table->string('room_number');
             $table->string('image');
+            $table->integer('status')->default('0');
             $table->timestamps();
         });
     }
