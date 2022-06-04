@@ -7,3 +7,8 @@
 
     
  ![hospital](https://user-images.githubusercontent.com/80118217/169105739-1222b66e-c8bf-4541-b200-f1363a333654.JPG)
+
+
+## Doctor Create form
+
+![createForm](https://user-images.githubusercontent.com/80118217/171988587-7657b344-19af-4af7-ab62-9869538354cf.JPG)
