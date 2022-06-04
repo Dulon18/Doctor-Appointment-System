@@ -3,21 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
-
   <title>HMS</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-<link rel="stylesheet" href="{{url('frontend/assets/css/maicons.css')}}">
-
+  <link rel="stylesheet" href="{{url('frontend/assets/css/maicons.css')}}">
   <link rel="stylesheet" href="{{url('frontend/assets/css/bootstrap.css')}}">
-
   <link rel="stylesheet" href="{{url('frontend/assets/vendor/owl-carousel/css/owl.carousel.css')}}">
-
   <link rel="stylesheet" href="{{url('frontend/assets/vendor/animate/animate.css')}}">
-
   <link rel="stylesheet" href="{{url('frontend/assets/css/theme.css')}}">
 </head>
 <body>
@@ -70,22 +66,22 @@
             <li class="nav-item active">
               <a class="nav-link" href="{{route('home')}}">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
               <a class="nav-link" href="{{route('doctor.all')}}">Doctors</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
               <a class="nav-link" href="blog.html">News</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
             @if(Route::has('login'))
             @auth
-            <li class="nav-item">
-              <a class="nav-link btn btn-primary ml-lg-3" href="{{route('myAppointment')}}"> My Appointment</a>
+            <li class="nav-item ">
+              <a class="btn btn-primary ml-lg-3" href="{{route('myAppointment')}}"> My Appointment</a>
             </li>
             <x-app-layout></x-app-layout>
             @else
@@ -103,80 +99,68 @@
       </div> <!-- .container -->
     </nav>
   </header>
-  @if(session()->has('success'))
-                <p class="alert alert-success">
-                  <button type="button" class="close" data-dismiss="alert">x</button>
-                  {{session()->get('success')}}</p>
-              @endif
 
-  <div class="page-hero bg-image overlay-dark" style="background-image: url(frontend/assets/img/bg_image_3.jpg);">
-    <div class="hero-section">
-      <div class="container text-center wow zoomIn">
-        <span class="subhead">Let's make your life happier</span>
-        <h1 class="display-4">Healthy Living</h1>
-        <a href="#" class="btn btn-primary">Let's Consult</a>
-      </div>
+    <div class="page-banner overlay-dark bg-image" style="background-image: url(frontend/assets/img/bg_image_1.jpg);">
+    <div class="banner-section">
+      <div class="container text-center wow fadeInUp">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Appointment</li>
+          </ol>
+        </nav>
+        <h1 class="font-weight-normal">My Appointment List</h1>
+      </div> <!-- .container -->
+    </div> <!-- .banner-section -->
+  </div> <!-- .page-banner -->
+
+  <div class="page-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row">
+        
+          <table class="table">
+            
+  <thead>
+  <h1 style="text-align:center; padding:20px; background-color:aquamarine">Your Appointment List</h1>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Doctor Name</th>
+      <th scope="col">Message</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach($appointments as $key=>$appoint)
+    <tr>
+
+      <th scope="row">{{$key+1}}</th>
+      <td>{{$appoint->doctor_name}}</td>
+      <td>{{$appoint->message}}</td>
+      <td>{{$appoint->phone}}</td>
+      <td>{{$appoint->date}}</td>
+      <td>{{$appoint->status}}</td>
+      <td>
+          <a type="button" style=" background-color:red" class="btn btn-danger" href="{{route('cancleAppointment',$appoint->id)}}" onclick="return confirm('Are you sure to Delete??')" >Cancle</a>
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+   </table>  
     </div>
+    </div>
+   </div>
   </div>
-
-
-  <div class="bg-light">
-    <div class="page-section py-3 mt-md-n5 custom-index">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-4 py-3 py-md-0">
-            <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-secondary text-white">
-                <span class="mai-chatbubbles-outline"></span>
-              </div>
-              <p><span>Chat</span> with a doctors</p>
-            </div>
-          </div>
-          <div class="col-md-4 py-3 py-md-0">
-            <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-primary text-white">
-                <span class="mai-shield-checkmark"></span>
-              </div>
-              <p><span>Incare</span>-Health Protection</p>
-            </div>
-          </div>
-          <div class="col-md-4 py-3 py-md-0">
-            <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-accent text-white">
-                <span class="mai-basket"></span>
-              </div>
-              <p><span>Incare</span>-Health Pharmacy</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- .page-section -->
-
-    <div class="page-section pb-0">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 py-3 wow fadeInUp">
-            <h1>Welcome to Your Health <br> Center</h1>
-            <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
-            <a href="about.html" class="btn btn-primary">Learn More</a>
-          </div>
-          <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
-            <div class="img-place custom-img-1">
-              <img src="{{url('frontend/assets/img/bg-doctor.png')}}" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- .bg-light -->
-  </div> <!-- .bg-light -->
-
-  @include('user.doctor')
-  @include('user.latest_news')
-  <!-- .page-section -->
-@include('user.appointment')
-   <!-- .page-section -->
- <!-- .banner-home -->
-
+ </div>
+</div>
+    
+            
+    
+    
   <footer class="page-footer">
     <div class="container">
       <div class="row px-md-3">

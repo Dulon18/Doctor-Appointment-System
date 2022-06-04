@@ -52,4 +52,24 @@ class HomeController extends Controller
      
       return redirect()->back()->with('success','Appointment successfully done..We contact with you soon..');
     }
+
+    function myAppointment()
+    {
+        if(Auth::id())
+        {
+            $user_id=Auth::user()->id;
+            $appointments=Appointment::where('user_id',$user_id)->get();
+            return view('user.myAppointment',compact('appointments'));
+        }
+        //dd($appointments);
+        else
+        return redirect()->back();
+        
+    }
+
+    function cancleAppointment($id)
+    {
+        Appointment::find($id)->delete();
+        return redirect()->back()->with('success','Services Deleted.');
+    }
 }

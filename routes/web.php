@@ -38,4 +38,6 @@ Route::post('/store',[DoctorController::class,'store'])->name('doctor.store');
 Route::get('/status/{id}',[DoctorController::class,'changeStatus'])->name('doctor.status');
 
 //appointment
+Route::get('/myAppointment',[HomeController::class,'myAppointment'])->name('myAppointment');
 Route::post('/store',[HomeController::class,'appointmentStore'])->name('appointment.store');
+Route::get('/myAppointment/cancleAppointment/{id}',[HomeController::class,'cancleAppointment'])->name('cancleAppointment');

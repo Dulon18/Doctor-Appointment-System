@@ -73,7 +73,7 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="{{route('doctor.all')}}">Doctors</a>
             </li>
             <li class="nav-item">
@@ -85,7 +85,7 @@
             @if(Route::has('login'))
             @auth
             <li class="nav-item">
-              <a class="nav-link btn btn-primary ml-lg-3" href="#"> My Appointment</a>
+              <a class="nav-link btn btn-primary ml-lg-3" href="{{route('myAppointment')}}"> My Appointment</a>
             </li>
             <x-app-layout></x-app-layout>
             @else
@@ -104,12 +104,12 @@
     </nav>
   </header>
 
-    <div class="page-banner overlay-dark bg-image" style="background-image: url(frontend/assets/img/bg_image_1.jpg);">
+  <div class="page-banner overlay-dark bg-image" style="background-image: url(frontend/assets/img/bg_image_1.jpg);">
     <div class="banner-section">
       <div class="container text-center wow fadeInUp">
         <nav aria-label="Breadcrumb">
           <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Doctors</li>
           </ol>
         </nav>
@@ -148,10 +148,6 @@
     
             
     
-      
-
-
-
   <footer class="page-footer">
     <div class="container">
       <div class="row px-md-3">
