@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 class DoctorController extends Controller
 {
+
+  
     public function doctorList()
     {
         $doctors=Doctor::all();

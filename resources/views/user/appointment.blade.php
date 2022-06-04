@@ -1,10 +1,7 @@
-
-  <div class="page-section">
+<div class="page-section">
     <div class="container">
       <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
-      @if(session()->has('success'))
-                <p class="alert alert-success">{{session()->get('success')}}</p>
-              @endif
+     
       <form class="main-form" action="{{route('appointment.store')}}" method="POST">
         @csrf
         <div class="row mt-5 ">
@@ -33,9 +30,9 @@
             <textarea name="message" id="message" class="form-control" rows="6" placeholder="Enter message.."></textarea>
           </div>
         </div>
-
-        <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Submit Request</button>
+        
+        <button type="submit" class="btn btn-primary mt-3">Submit Request</button>
       </form>
-
+  
     </div>
   </div>

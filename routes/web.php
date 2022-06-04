@@ -15,7 +15,7 @@ use App\Http\Controllers\DoctorController;
 |
 */
 
-Route::get('/home',[HomeController::class,'home'])->name('admin.home');
+Route::get('/home',[HomeController::class,'home'])->name('home');
 
 Route::get('/',[AdminController::class,'user']);
 Route::get('/admin',[AdminController::class,'admin']);
@@ -31,6 +31,7 @@ Route::middleware([
     })->name('dashboard');
 });
 //Doctor
+Route::get('/doctor/all',[HomeController::class,'doctors'])->name('doctor.all');
 Route::get('/doctor/list',[DoctorController::class,'doctorList'])->name('doctor.list');
 Route::get('/add',[DoctorController::class,'doctorAdd'])->name('doctor.add');
 Route::post('/store',[DoctorController::class,'store'])->name('doctor.store');

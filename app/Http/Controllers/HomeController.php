@@ -27,6 +27,12 @@ class HomeController extends Controller
             return redirect()->back();
         }
     }
+    // all doctor
+    public function doctors()
+    {
+        $doctors=Doctor::all();
+        return view('user.allDoctor',compact('doctors'));
+    }
 
     //appointment data store
     function appointmentStore(Request $request)
