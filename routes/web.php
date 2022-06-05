@@ -33,15 +33,17 @@ Route::middleware([
 //Doctor
 Route::get('/doctor/all',[HomeController::class,'doctors'])->name('doctor.all');
 Route::get('/doctor/list',[DoctorController::class,'doctorList'])->name('doctor.list');
-Route::get('/add',[DoctorController::class,'doctorAdd'])->name('doctor.add');
+Route::get('/add/',[DoctorController::class,'doctorAdd'])->name('doctor.add');
 Route::get('/status/{id}',[DoctorController::class,'changeStatus'])->name('doctor.status');
-Route::post('/store',[DoctorController::class,'store'])->name('doctorStore');
+Route::post('/doctorinfoStore',[DoctorController::class,'storeDoctorInfo'])->name('doctorStore');
 Route::get('/edit/{id}',[DoctorController::class,'editDoctor'])->name('doctor.edit');
 Route::put('/update/{id}',[DoctorController::class,'updateDoctor'])->name('doctor.update');
+Route::get('/delete/{id}',[DoctorController::class,'deleteDoctor'])->name('deleteDoctor');
+
 
 //appointment
 Route::get('/myAppointment',[HomeController::class,'myAppointment'])->name('myAppointment');
-Route::post('/store',[HomeController::class,'appointmentStore'])->name('appointment.store');
+Route::post('/store/appointment',[HomeController::class,'appointmentStore'])->name('appointment.store');
 Route::get('/myAppointment/cancleAppointment/{id}',[HomeController::class,'cancleAppointment'])->name('cancleAppointment');
 Route::get('/showAppointmentsList',[AdminController::class,'showAppointments'])->name('showAppointments');
 Route::get('/approved/{id}',[AdminController::class,'approvedStatus'])->name('approvedStatus');

@@ -18,7 +18,7 @@ class DoctorController extends Controller
         return view('admin.pages.doctor.doctor_add_form');
     }
 
-    public function store(Request $request){
+    public function storeDoctorInfo(Request $request){
 
            $filename=null;
             if ($request->hasFile('image'))
@@ -55,7 +55,7 @@ class DoctorController extends Controller
 
     }
 
-    // update doctor form
+    // update doctor info
 
     function editDoctor($id)
     {
@@ -82,5 +82,11 @@ class DoctorController extends Controller
   
         ]);
          return redirect()->back()->with('success','Update Successfully..!!');
+      }
+
+      public function deleteDoctor($id)
+      {
+          $doctor=Doctor::find($id)->delete();
+          return redirect()->back()->with('success',' Delete Successfully..!');
       }
 }
