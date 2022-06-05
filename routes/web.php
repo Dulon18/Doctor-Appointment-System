@@ -18,7 +18,7 @@ use App\Http\Controllers\DoctorController;
 Route::get('/home',[HomeController::class,'home'])->name('home');
 
 Route::get('/',[AdminController::class,'user']);
-Route::get('/admin',[AdminController::class,'admin']);
+Route::get('/admin',[AdminController::class,'admin'])->name('admin.home');
 
 
 Route::middleware([
@@ -34,10 +34,13 @@ Route::middleware([
 Route::get('/doctor/all',[HomeController::class,'doctors'])->name('doctor.all');
 Route::get('/doctor/list',[DoctorController::class,'doctorList'])->name('doctor.list');
 Route::get('/add',[DoctorController::class,'doctorAdd'])->name('doctor.add');
-Route::post('/store',[DoctorController::class,'store'])->name('doctor.store');
 Route::get('/status/{id}',[DoctorController::class,'changeStatus'])->name('doctor.status');
+Route::post('/store',[DoctorController::class,'store'])->name('doctorStore');
 
 //appointment
 Route::get('/myAppointment',[HomeController::class,'myAppointment'])->name('myAppointment');
 Route::post('/store',[HomeController::class,'appointmentStore'])->name('appointment.store');
 Route::get('/myAppointment/cancleAppointment/{id}',[HomeController::class,'cancleAppointment'])->name('cancleAppointment');
+Route::get('/showAppointmentsList',[AdminController::class,'showAppointments'])->name('showAppointments');
+Route::get('/approved/{id}',[AdminController::class,'approvedStatus'])->name('approvedStatus');
+Route::get('/cancled/{id}',[AdminController::class,'cancledStatus'])->name('cancledStatus');

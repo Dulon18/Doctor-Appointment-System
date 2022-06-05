@@ -21,7 +21,7 @@
               @endif
                 <!-- message Show end -->
                 <!-- form start -->
-                    <form action="{{route('doctor.store')}}" method="POST" class="forms-sample" enctype="multipart/form-data">
+                    <form action="{{route('doctorStore')}}" method="POST" class="forms-sample" enctype="multipart/form-data">
                       @csrf
                       <div class="form-group">
                         <label for="exampleInputName1">Name</label>

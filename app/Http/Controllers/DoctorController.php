@@ -20,10 +20,9 @@ class DoctorController extends Controller
 
     public function store(Request $request){
 
-        $filename=null;
+           $filename=null;
             if ($request->hasFile('image'))
-            {
-                
+            {           
                 $file=$request->file('image');
                 $filename=date('Ymdhms').'.'.$file->getClientOriginalExtension();
                 $file->storeAs('/storage',$filename);

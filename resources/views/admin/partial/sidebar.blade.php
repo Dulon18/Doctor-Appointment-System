@@ -34,8 +34,8 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/tables/basic-table.html">
-                <span class="menu-title">Patients</span>
+              <a class="nav-link" href="{{route('showAppointments')}}">
+                <span class="menu-title">Appointment</span>
                 <i class="mdi mdi-table-large menu-icon"></i>
               </a>
             </li>
