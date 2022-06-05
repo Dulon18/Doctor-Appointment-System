@@ -30,15 +30,17 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
 //Doctor
 Route::get('/doctor/all',[HomeController::class,'doctors'])->name('doctor.all');
 Route::get('/doctor/list',[DoctorController::class,'doctorList'])->name('doctor.list');
-Route::get('/add/',[DoctorController::class,'doctorAdd'])->name('doctor.add');
+Route::get('/add',[DoctorController::class,'doctorAdd'])->name('doctor.add');
 Route::get('/status/{id}',[DoctorController::class,'changeStatus'])->name('doctor.status');
-Route::post('/doctorinfoStore',[DoctorController::class,'storeDoctorInfo'])->name('doctorStore');
+Route::post('/add/doctorinfoStore',[DoctorController::class,'storeDoctorInfo'])->name('doctorInfoStore');
 Route::get('/edit/{id}',[DoctorController::class,'editDoctor'])->name('doctor.edit');
 Route::put('/update/{id}',[DoctorController::class,'updateDoctor'])->name('doctor.update');
 Route::get('/delete/{id}',[DoctorController::class,'deleteDoctor'])->name('deleteDoctor');
+Route::get('/view/{id}',[DoctorController::class,'viewDoctor'])->name('viewDoctor');
 
 
 //appointment

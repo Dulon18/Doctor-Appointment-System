@@ -89,4 +89,11 @@ class DoctorController extends Controller
           $doctor=Doctor::find($id)->delete();
           return redirect()->back()->with('success',' Delete Successfully..!');
       }
+
+      //view details
+      function viewDoctor($id)
+      {
+          $doctor=Doctor::find($id);
+          return view('admin.pages.doctor.viewDetails',compact('doctor'));
+      }
 }

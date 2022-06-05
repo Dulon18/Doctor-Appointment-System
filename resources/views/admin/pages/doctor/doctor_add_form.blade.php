@@ -16,13 +16,15 @@
                       </div>
                   @endif
 
-              @if(session()->has('success'))
-                <p class="alert alert-success">{{session()->get('success')}}</p>
-              @endif
+                  @if(session()->has('success'))
+                    <p class="alert alert-success">
+                      <button type="button" class="close" data-dismiss="alert">x</button>
+                      {{session()->get('success')}}</p>
+                  @endif
                 <!-- message Show end -->
                 <!-- form start -->
-                    <form   class="forms-sample" action="{{route('doctorInfoStore')}}"   method="post" enctype="multipart/form-data">
-                    {{ csrf_field() }}
+                    <form   class="forms-sample" action="{{route('doctorInfoStore')}}"   method="POST" enctype="multipart/form-data">
+                     @csrf
                       <div class="form-group">
                         <label for="exampleInputName1">Name</label>
                         <input name =name type="text" class="form-control"  placeholder="Name">

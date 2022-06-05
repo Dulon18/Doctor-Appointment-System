@@ -2,6 +2,12 @@
 @section('content')
 <div class="row">
               <div class="col-12 grid-margin">
+                
+              @if(session()->has('success'))
+                <p class="alert alert-success">
+                  <button type="button" class="close" data-dismiss="alert">x</button>
+                  {{session()->get('success')}}</p>
+              @endif
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Doctor List </h4>
@@ -50,7 +56,7 @@
                             <td>
                               <a type="button" href="{{route('doctor.edit',$doctor->id)}}" class="btn btn-outline-info">Edit</a>
                               <a type="button" href="{{route('deleteDoctor',$doctor->id)}}" class="btn btn-outline-danger">Delete</a>
-                              <a type="button" href="" class="btn btn-outline-primary">View</a>
+                              <a type="button" href="{{route('viewDoctor',$doctor->id)}}" class="btn btn-outline-primary">View</a>
                             </td>
                             
                           </tr> 
