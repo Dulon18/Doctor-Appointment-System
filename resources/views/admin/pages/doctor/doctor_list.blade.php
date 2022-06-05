@@ -48,7 +48,7 @@
                             @endif
                             </td>
                             <td>
-                              <a type="button" href="" class="btn btn-outline-info">Edit</a>
+                              <a type="button" href="{{route('doctor.edit',$doctor->id)}}" class="btn btn-outline-info">Edit</a>
                               <a type="button" href="" class="btn btn-outline-danger">Delete</a>
                               <a type="button" href="" class="btn btn-outline-primary">View</a>
                             </td>

@@ -54,4 +54,33 @@ class DoctorController extends Controller
         return redirect()->back()->with('success','Status Update Successfully..!');
 
     }
+
+    // update doctor form
+
+    function editDoctor($id)
+    {
+        $doctor=Doctor::find($id);
+        return view('admin.pages.doctor.editForm',compact('doctor'));
+    }
+
+    function updateDoctor(Request $request, $id)
+    {
+        $doctor=Doctor::find($id);
+        $doctor_image=$doctor->image;
+        if ($request->hasFile('image'))
+        {
+            $doctor_image=date('Ymdhms').'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/storage',$doctor_image);
+        }
+
+        $doctor->update([
+            'name'=>$request->name,
+            'specility'=>$request->specility,
+            'phone'=>$request->phone,
+            'room_number'=>$request->room,
+            'image'=>$doctor_image,
+  
+        ]);
+         return redirect()->back()->with('success','Update Successfully..!!');
+      }
 }

@@ -21,29 +21,33 @@
               @endif
                 <!-- message Show end -->
                 <!-- form start -->
-                    <form  action="{{route('doctorStore')}}"  method="POST" class="forms-sample" enctype="multipart/form-data">
+                    <form action="{{route('doctor.update',$doctor->id)}}" method="POST" class="forms-sample" enctype="multipart/form-data">
+                   
                       @csrf
+                      @method('put')
                       <div class="form-group">
                         <label for="exampleInputName1">Name</label>
-                        <input name =name type="text" class="form-control"  placeholder="Name">
+                        <input name =name type="text" class="form-control"  value="{{$doctor->name}}">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Specility</label>
-                        <input type="text" name="specility" class="form-control" placeholder="Specility">
+                        <input type="text" name="specility" class="form-control"  value="{{$doctor->specility}}">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Phone</label>
-                        <input type="number" name="phone" class="form-control" placeholder="Phone">
+                        <input type="number" name="phone" class="form-control"  value="{{$doctor->phone}}">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Room</label>
-                        <input type="text" name="room" class="form-control" placeholder="Room">
+                        <input type="text" name="room" class="form-control"  value="{{$doctor->room_number}}">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Image Upload</label>
                         <input type="file" name="image" class="form-control" placeholder="Choose image">
-                      </div>      
-                      <button type="submit" class="btn btn-outline-info me-2">Submit</button>
+                        <img style="border-radius: 4px;" width="200px;" src=" {{url('/storage/'.$doctor->image)}}" alt="product">
+                      </div>
+
+                      <button type="submit" class="btn btn-outline-info me-2">Save</button>
                       <a href="{{route('doctor.list')}}" type="button" class="btn btn-outline-danger">Back</a>
                     </form>
                   </div>

@@ -36,6 +36,8 @@ Route::get('/doctor/list',[DoctorController::class,'doctorList'])->name('doctor.
 Route::get('/add',[DoctorController::class,'doctorAdd'])->name('doctor.add');
 Route::get('/status/{id}',[DoctorController::class,'changeStatus'])->name('doctor.status');
 Route::post('/store',[DoctorController::class,'store'])->name('doctorStore');
+Route::get('/edit/{id}',[DoctorController::class,'editDoctor'])->name('doctor.edit');
+Route::put('/update/{id}',[DoctorController::class,'updateDoctor'])->name('doctor.update');
 
 //appointment
 Route::get('/myAppointment',[HomeController::class,'myAppointment'])->name('myAppointment');
