@@ -16,6 +16,7 @@
                                 <th scope="col">Message</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Action</th>
+                                <th scope="col">Email</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,6 +32,9 @@
                                 <td>
                                     <a type="button" class="btn btn-success" style="color: black;"  href="{{route('approvedStatus',$appoint->id)}}">Approved</a>
                                     <a type="button" class="btn btn-danger" style="color: black;" href="{{route('cancledStatus',$appoint->id)}}">Cancled</a>
+                                </td>
+                                <td>
+                                <a type="button" class="btn btn-info" style="color: black;" href="{{route('cancledStatus',$appoint->id)}}">Send</a>
                                 </td>
                                 </tr>
                           @endforeach
