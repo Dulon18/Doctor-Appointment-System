@@ -42,11 +42,11 @@
                         <input type="text" name="room" class="form-control" placeholder="Room">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail3">Image Upload</label>
-                        <input type="file" name="image" class="form-control" placeholder="Choose image">
+                        <label for="formFileLg" class="form-label">Image Upload</label>
+                        <input type="file" name="image" class="form-control form-control-lg" >
                       </div>      
                       <button type="submit" class="btn btn-outline-info me-2">Submit</button>
-                      <a href="{{route('doctor.list')}}" type="button" class="btn btn-outline-danger">Back</a>
+                      <a href="{{route('doctor.list')}}" type="button" class="btn btn-outline-danger" >Back</a>
                     </form>
                   </div>
                 </div>
