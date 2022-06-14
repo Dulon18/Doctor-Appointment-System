@@ -50,3 +50,7 @@ Route::get('/myAppointment/cancleAppointment/{id}',[HomeController::class,'cancl
 Route::get('/showAppointmentsList',[AdminController::class,'showAppointments'])->name('showAppointments');
 Route::get('/approved/{id}',[AdminController::class,'approvedStatus'])->name('approvedStatus');
 Route::get('/cancled/{id}',[AdminController::class,'cancledStatus'])->name('cancledStatus');
+
+
+//news details
+Route::get('/aboutUs',[HomeController::class,'aboutUs'])->name('aboutUs');

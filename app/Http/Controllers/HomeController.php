@@ -80,4 +80,12 @@ class HomeController extends Controller
         Appointment::find($id)->delete();
         return redirect()->back()->with('success','Services Deleted.');
     }
+
+    //news
+
+   public  function aboutUs()
+    {
+        $doctors=Doctor::all();
+        return view('user.about',compact('doctors'));
+    }
 }
